@@ -110,7 +110,7 @@ fun Home(navController: NavController) {
                         }
                     }
                 }
-
+//
                 if (!isCollapsed) Divider(Modifier.fillMaxWidth())
 
                 Column(
