@@ -1,4 +1,4 @@
-package com.tuse.afinal.view
+package com.tuse.afinal.ui.screen
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.*

@@ -1,4 +1,4 @@
-package com.tuse.afinal.view
+package com.tuse.afinal.ui.screen
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable

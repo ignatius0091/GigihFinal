@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">final</string>
     <string name="MAPS_API_KEY">AIzaSyAAJoHy6-EmMLOqs-cMDM3Z7Ivgms1Hkhc</string>
+    <string name="bencana">Bencana: %1$s</string>
+    <string name="waktu">Waktu: %1$s</string>
+    <string name="informasi_bencana_terkini">Informasi Bencana Terkini</string>
+    <string name="loading_failed">Loading Failed</string>
 </resources>

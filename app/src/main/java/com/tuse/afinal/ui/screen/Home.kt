@@ -1,4 +1,4 @@
-package com.tuse.afinal.view
+package com.tuse.afinal.ui.screen
 
 import androidx.compose.animation.core.Animatable
 
@@ -7,7 +7,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -22,16 +21,15 @@ import androidx.compose.ui.graphics.Color
 
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.tuse.afinal.R
 
 import kotlinx.coroutines.launch
@@ -104,7 +102,7 @@ fun Home(navController: NavController) {
                                     .size(20.dp)
                             )
                             Text(
-                                text = "Informasi Bencana Terkini",
+                                text = stringResource(R.string.informasi_bencana_terkini),
                                 style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 18.sp)
                             )
                         }
@@ -119,12 +117,8 @@ fun Home(navController: NavController) {
                         .verticalScroll(rememberScrollState()),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    
-                    CardWidget()
-                    CardWidget()
-                    CardWidget()
-                    CardWidget()
-                    CardWidget()
+                    val disasterViewModel: DisasterViewModel = viewModel(factory = DisasterViewModel.Factory)
+                    DisasterGridState(disasterUiState = disasterViewModel.disasterUiState)
 
                 }
             }
@@ -159,6 +153,8 @@ fun Home(navController: NavController) {
         }
     }
 }
+
+
 
 
 
